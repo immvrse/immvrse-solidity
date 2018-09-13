@@ -1,52 +1,39 @@
-# Prerequisites
-*.d
+*.swp
+*.swo
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Logs
+logs
+*.log
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Runtime data
+pids
+*.pid
+*.seed
+allFiredEvents
+scTopics
 
-# Precompiled Headers
-*.gch
-*.pch
+# Coverage directory used by tools like istanbul
+coverage
+coverage.json
+coverageEnv
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# node-waf configuration
+.lock-wscript
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# Dependency directory
+node_modules
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# Debug log from npm
+npm-debug.log
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# local env variables
+.env
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# truffle build directory
+build/
+
+# lol macs
+.DS_Store/
+
+# truffle
+.node-xmlhttprequest-*
