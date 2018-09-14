@@ -1,7 +1,7 @@
 pragma solidity 0.4.24;
 
 import "../IERC20.sol";
-import "github.com/OpenZeppelin/openzeppelin-solidity/contracts/math/SafeMath.sol";
+import "../../contracts/math/SafeMath.sol";
 
 
 /**
