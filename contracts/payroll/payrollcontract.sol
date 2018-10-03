@@ -39,7 +39,7 @@ function withdraw() canWithdraw {		//"canWithdraw" enables the function to be ca
 	uint amount= amountAllocated- amountWithdrawn;			//update how much they have withdrawn
 	withdrawnAmounts[msg.sender] = amountWithdrawn +amount;		//update how much they have withdrawn
 	
-	if (amount>0){							//if money allocated has not withdrawn
+	if (amount>0){							//if money allocated has not been withdrawn
 		msg.sender.transfer(amount);
 	}
 
