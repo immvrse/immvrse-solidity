@@ -6,11 +6,11 @@ address[] employees =[" "," ", " "];	//put account numbers here
 uint totalreceived =0;				//counter of total ethers invested in this account
 mapping(address => uint) withdrawnAmounts;	 //a dictionary which enables us to check if the requester has already withdrawn or not
 
-function payrollsrs() payable{
+function payrollsrs() payable{		//**error
 updateTotalReceived();
 }
 
-function() payable{
+function() payable{			//**error
 updateTotalReceived(); 				//people can pay in this account
 }
 
@@ -32,7 +32,7 @@ require(contains);
 _;
 }	
 	
-function withdraw() canWithdraw {		//"canWithdraw" enables the function to be called so that it could check the requesting person's address
+function withdraw() canWithdraw {		//**error
 
 	uint amountAllocated= totalreceived/employees.length; 		//declaring the amount allocated for the requester to withdraw 
 	uint amountWithdrawn= withdrawnAmounts[msg.sender];		//check if the "address" has already withdrawn using mapping
