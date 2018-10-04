@@ -2,7 +2,7 @@ pragma solidity ^0.4.0;
 
 contract payrollsrs{
 
-address[] employees =[" "," ", " "];	//put account numbers here
+address[] employees =["0x248A0f639692D9C0FeA092801Be6627313F796ca","0x87A7B9efd2a258bd44b8C96590975fAe8A5EAb5E", "0x061ea0DBED993D720F0a8683088Ce10faa0C50e6"];	//put account numbers here
 uint totalreceived =0;				//counter of total ethers invested in this account
 mapping(address => uint) withdrawnAmounts;	 //a dictionary which enables us to check if the requester has already withdrawn or not
 
