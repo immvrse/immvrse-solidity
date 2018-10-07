@@ -1,0 +1,40 @@
+pragma solidity ^0.4.25;
+
+
+contract RealEstate 
+{
+    
+address public seller;
+    // puttting it in public means that everyone can see this parts
+string public streetAddress;
+    
+string title;
+    
+uint256 public price; 
+
+    
+    
+    
+function RealEstate (){
+        
+    
+    
+//who is the seller?
+    
+seller = msg.sender;
+    
+//what is the address
+    
+streetAddress= "221B Baker Street";
+    
+//what is the title
+    
+title="holmes house";
+   
+//what is the price
+   
+price=12000000000000000000;//12 ether to wei
+    	
+	}
+
+}
