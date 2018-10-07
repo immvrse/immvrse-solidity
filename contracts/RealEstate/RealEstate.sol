@@ -18,7 +18,7 @@ contract RealEstate {
     //what is the title
     title="holmes house";
     //what is the price
-    price=12000000000000000000;  //12 ether to wei
+    price=12000000000000000000;  //12 ether to wei(price of the property)
     }
     
 //making a buy function
