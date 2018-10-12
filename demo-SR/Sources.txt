@@ -1,0 +1,10 @@
+Used these videos as references to create the node
+
+1.Setting up development envoironment:
+
+ https://www.youtube.com/watch?v=YjmGKnQmKYY
+
+
+2.Setting up the private node:
+
+ https://www.youtube.com/watch?v=JTwWCeIKAiE&t=911s
