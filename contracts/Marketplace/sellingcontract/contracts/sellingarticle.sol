@@ -1,5 +1,6 @@
 pragma solidity ^0.4.24;
 
+//contract name requires modification
 contract sellingarticle {
   //state variables
   address seller;
