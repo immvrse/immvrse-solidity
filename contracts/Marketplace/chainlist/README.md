@@ -1,4 +1,7 @@
 
+## Truffle Box
+This readme contains files for the DApp to be run on localhost.
+
 ## Installation
 
 1. Install Truffle globally.
