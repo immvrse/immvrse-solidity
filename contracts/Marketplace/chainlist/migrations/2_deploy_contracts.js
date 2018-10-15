@@ -1,4 +1,4 @@
-var chainlist = artifacts.require("./chainlist.sol");
+var chainlist = artifacts.require("./productlist.sol");
 
 module.exports = function(deployer) {
   deployer.deploy(chainlist);
