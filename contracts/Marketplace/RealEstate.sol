@@ -1,7 +1,7 @@
 pragma solidity ^0.4.25;
 
 //This is a contract for selling and buying properties where seller can set a specific price in wei and 
-  the buyer has to buy it at that proce
+  the buyer has to buy it at that price
 contract RealEstate {
     address public seller;
     address public buyer;
