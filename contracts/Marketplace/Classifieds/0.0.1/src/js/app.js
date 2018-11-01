@@ -46,6 +46,9 @@ App = {
           App.contracts.Classifieds = TruffleContract(classifiedsArtifact);
           //set the provider for the contracts
           App.contracts.Classifieds.setProvider(App.web3Provider);
+
+        //listen to events
+        App.listentoEvents();
           //retrieve the article from the contract
           return App.reloadArticles()
         });
@@ -65,11 +68,11 @@ App = {
            return;
          }
 
-         //retrieve the article template and fill interval and fill interval and fill it
+         //retrieve the article template and fill interval
          var articleTemplate = $('#articleTemplate');
          articleTemplate.find('.panel-title').text(article[1]);
          articleTemplate.find('.article-description').text(article[2]);
-         articleTemplate.find('article-price').text(web3.fromWei(article[3],"ether"));
+         articleTemplate.find('.article-price').text(web3.fromWei(article[3],"ether"));
 
          var seller =article[0];
          if (seller == App.account){
@@ -83,7 +86,45 @@ App = {
         console.error(err.message);
        });
 
-     }
+     },
+
+     sellArticle: function(){
+       //retrieve the detail of the articles
+       var _article_name = $('#article_name').val();
+       var _description = $('#article_description').val();
+       var _price = web3.toWei(parseFloat($('#article_price').val()||0),"ether");
+
+
+      if((_article_name.trim()=='') || (_price == 0)){
+        //nothing to sell
+        return false;
+      }
+      App.contracts.Classifieds.deployed().then (function(instance){
+        return instance.sellArticle(_article_name, _description, _price,{
+          from: App.account,
+          gas: 500000
+        });
+      }).then(function(result)
+    {
+
+    }).catch(function(err){
+      console.error(err);
+    });
+  },
+//listen to events triggered by contracts
+
+  listentoEvents: function(){
+    App.contracts.Classifieds.deployed().then(function(instance){
+      instance.LogSellArticle({},{}).watch(function(error,event){
+        if(!error){
+          $("#events").append('<li class="list-group-item">'+ event.args._name + ' is now for sale</li>');
+        }else{
+          console.error(error);
+        }
+        App.reloadArticles();
+      })
+    });
+  }
 };
 
 $(function() {
