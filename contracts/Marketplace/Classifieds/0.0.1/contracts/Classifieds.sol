@@ -8,11 +8,14 @@ contract Classifieds {
   string description;
   uint256 price;
 
-  //constructor
+  //events
+  event LogSellArticle(
+    address indexed _seller,
+    string _name,
+    uint256 _price
+    );
 
-    function Classifieds()public{
-      sellArticle("Default Article", "This is an article set by default", 100000000000000000);
-    }
+
 
   //sell an article
   function sellArticle(string _name, string _description, uint256 _price) public{
@@ -20,6 +23,8 @@ contract Classifieds {
     name = _name;
     description = _description;
     price = _price;
+
+    LogSellArticle(seller, name, price);
   }
 
 
