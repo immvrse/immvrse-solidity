@@ -34,26 +34,4 @@ contract Classifieds {
   {
     return(seller, name, description, price);
   }
-
- //buy an article
-
- function buyArticle() payable public{
- //we can check whether there is an article for sale
-    require(seller != 0x0);
-
-    //we check whether the article ahas not been sold yet
-    require(buyer == 0x0);
-
-    //we dont allow the seller to buy his own article
-    require (msg.sender != seller);
-
-  // we check the value sent corresponds to the price of the article
-  require(msg.value == price);
-
-  //keep buyers information
-  buyer = msg.sender;
-
-    // the buyer can pay the seller
-    seller.transfer(msg.value);
-  }
 }
