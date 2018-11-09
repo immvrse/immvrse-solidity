@@ -1,3 +1,10 @@
+BETA VERSION
+TESTED LOCALLY
+ERRORS WHILE UPLOADING ITEMS
+
+
+
+
 ### Installation
 
 1. Install Truffle globally.
