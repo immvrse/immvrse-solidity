@@ -139,7 +139,7 @@ App = {
         App.reloadArticles();
       });
 
-      instance.LogBuyArticle({},{}).watch(function(error,event){
+      instance.LogBuyArticle({}, {}).watch(function(error,event){
         if(!error){
           $("#events").append('<li class="list-group-item">'+ event.args._buyer + 'bought' + event.args._name + '</li>');
         }else{
@@ -167,8 +167,9 @@ App = {
     });
   }
 };
+
 $(function() {
-     $(window).load(function() {
-          App.init();
-     });
+  $(window).load(function() {
+    App.init();
+  });
 });
