@@ -14,7 +14,7 @@ Please check our [Whitepaper](https://immvr.se/wp-content/uploads/2018/10/Whitep
 ## ERC20 Token Contract
 This library provides implementations of up-to-date standards of ImmVRse ERC20 token contracts, as well as future developments of ERC721 contracts.
 
-Token Contract of ImmVRse Token [can be found here.](https://github.com/immvrse/immvrse-solidity/blob/master/contracts/token/ERC20/ImmVRseTokenContract.sol)
+ERC20 token Contract of ImmVRse Token [can be found here.](https://github.com/immvrse/immvrse-solidity/blob/master/contracts/token/ERC20/ImmVRseTokenContract.sol)
 
 ### Updates
 - Old contract [IMV](https://etherscan.io/address/0x97e63e68877eed5bddc8ddbecb50b5505eb03dd0#code) has been migrated to a new contract
